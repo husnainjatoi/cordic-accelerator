@@ -12,7 +12,7 @@ A hardware implementation of the **CORDIC (Coordinate Rotation Digital Computer)
 
 - 16-bit fixed-point implementation
 - Iterative CORDIC rotation mode
-- Moore FSM based controller
+- Hybrid Mealy-Moore FSM based controller
 - Dedicated ATAN lookup ROM
 - Self-checking SystemVerilog testbench
 - Makefile for automated compilation and simulation
@@ -104,8 +104,7 @@ The controller operates through four states:
 
 | State | Description |
 |--------|-------------|
-| **IDLE** | Waits for the `start` signal |
-| **INIT** | Loads the initial CORDIC values |
+| **IDLE** | Waits for the `start` signal and then loads the initial CORDIC values |
 | **CALC** | Executes one CORDIC iteration every clock cycle |
 | **DONE** | Raises `done` before returning to IDLE |
 
@@ -212,9 +211,6 @@ Reset
 IDLE
    │
 start
-   ▼
-INIT
-   │
    ▼
 16 CORDIC Iterations
    │
