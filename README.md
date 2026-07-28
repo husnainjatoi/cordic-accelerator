@@ -97,7 +97,7 @@ Outputs:
 # Controller FSM
 
 <p align="center">
-<img src="design/cordic_controller.jpeg" width="500">
+<img src="design/cordic_controller.jpg" width="500">
 </p>
 
 The controller operates through four states:
