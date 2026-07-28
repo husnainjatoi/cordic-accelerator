@@ -1,4 +1,4 @@
-# CORDIC Accelerator
+# 16-bit Iterative CORDIC Accelerator
 
 ![Language](https://img.shields.io/badge/Language-SystemVerilog-blue)
 [![Status](https://img.shields.io/badge/Status-Completed-success)]()
