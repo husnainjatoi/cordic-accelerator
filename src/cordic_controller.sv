@@ -7,7 +7,7 @@ module cordic_controller(
     output logic done
     );
     
-    typedef enum logic [1:0] {IDLE, INIT, CALC, DONE_ST} state_t;
+    typedef enum logic [1:0] {IDLE, CALC, DONE_ST} state_t;
     state_t current_state, next_state;
     logic [3:0] next_iter_count;
     
@@ -34,15 +34,13 @@ module cordic_controller(
             IDLE: begin
                 next_iter_count = 4'd0;
                 case(start)
-                    1'b1: next_state = INIT;
+                    1'b1: begin
+                        load_init = 1'b1;
+                        en_calc = 1;
+                        next_state = CALC;
+                    end
                     1'b0: next_state = IDLE;
                 endcase
-            end
-            
-            INIT: begin
-                load_init = 1'b1;
-                en_calc = 1'b1;
-                next_state = CALC;
             end
             
             CALC: begin
