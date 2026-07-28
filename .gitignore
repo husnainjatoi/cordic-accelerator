@@ -15,6 +15,7 @@ desktop.ini
 *.vcd
 *.wlf
 *.log
+*.vvp
 
 # Vivado
 .cache/
