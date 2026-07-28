@@ -1,0 +1,41 @@
+# Editor / Temporary Files
+*~
+*.swp
+*.tmp
+
+# VS Code
+.vscode/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Simulation Files
+*.vcd
+*.wlf
+*.log
+
+# Vivado
+.cache/
+.hw/
+.ip_user_files/
+.runs/
+.sim/
+.Xil/
+*.jou
+*.str
+*.pb
+*.xpr.user
+
+# Synopsys VCS
+csrc/
+simv
+simv.daidir/
+ucli.key
+DVEfiles/
+
+# Build Artifacts
+*.o
+*.out
+*.elf
