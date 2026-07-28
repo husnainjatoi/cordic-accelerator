@@ -6,8 +6,6 @@
 
 A hardware implementation of the **CORDIC (Coordinate Rotation Digital Computer)** algorithm written in **SystemVerilog**. This project computes **sine** and **cosine** values using an **iterative shift-add architecture**, avoiding hardware multipliers by relying solely on additions, subtractions, arithmetic shifts, and a lookup table of precomputed arctangent constants.
 
-This project was developed as part of a digital systems design assignment focusing on hardware accelerator design, finite state machines, fixed-point arithmetic, and verification.
-
 ---
 
 # Features
@@ -76,7 +74,7 @@ The controller generates the required control signals, while the datapath perfor
 # Top-Level Architecture
 
 <p align="center">
-<img src="design/cordic_top.jpg" width="700">
+<img src="design/cordic_top.jpg" width="500">
 </p>
 
 The top module connects the controller and datapath.
@@ -99,7 +97,7 @@ Outputs:
 # Controller FSM
 
 <p align="center">
-<img src="design/cordic_controller.jpg" width="500">
+<img src="design/cordic_controller.jpeg" width="500">
 </p>
 
 The controller operates through four states:
@@ -118,7 +116,7 @@ The controller also maintains the iteration counter used by the datapath.
 # Datapath
 
 <p align="center">
-<img src="design/cordic_datapath.jpg" width="800">
+<img src="design/cordic_datapath.jpg" width="500">
 </p>
 
 The datapath contains:
